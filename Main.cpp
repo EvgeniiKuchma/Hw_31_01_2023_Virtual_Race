@@ -3,9 +3,11 @@
 #include "ITrack.h"
 #include "AshaltTrack.h"
 #include "CrossroadTrack.h"
+#include "Car.h"
+#include "Van.h"
 int main(){
-	Van van;
-	Car car;
+	IVehicle* car = new Car;
+	IVehicle* van = new Van;
 	AshaltTrack race;
 	CrossroadTrack race1;
 	race.Welcome(van,car);
@@ -13,8 +15,8 @@ int main(){
 	Sleep(1000);
 	race1.Welcome(van, car);
 	race1.GoToRace_Winner(van, car);
-
-
+	delete car;
+	delete van;
 
 return 0;
 }

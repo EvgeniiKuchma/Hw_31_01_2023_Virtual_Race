@@ -4,8 +4,8 @@ class AshaltTrack : public ITrack
 {
 public:
 	AshaltTrack();
-	void Welcome(Van& van, Car& car) override;
-	void GoToRace_Winner(Van& van, Car& car) override;
+	void Welcome(IVehicle* van, IVehicle* car) override;
+	void GoToRace_Winner(IVehicle* van, IVehicle* car) override;
 private:
 	std::string _name_track;
 	double _track_coeff_speed_van;
